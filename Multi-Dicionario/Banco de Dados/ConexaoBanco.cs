@@ -5,7 +5,7 @@ namespace Multi_Dicionario.Banco_de_Dados
 {
     class ConexaoBanco
     {
-        string url = @"server=localhost;Database=multidicionario;Uid=lfdjs;pwd='lfdjs091091'";
+        readonly string url = @"server=localhost;Database=banco;Uid=user;pwd='senha'";
 
         public MySqlConnection conexao = null;
 
