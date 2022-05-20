@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3F76E6C-DFBA-4E9B-8503-A0FB07DA1FEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Multi_Dicionario</RootNamespace>
+    <AssemblyName>Multi-Dicionario</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Banco de Dados\ConexaoBanco.cs" />
+    <Compile Include="DAO\IdiomaDAO.cs" />
+    <Compile Include="DAO\PalavraDAO.cs" />
+    <Compile Include="DAO\PerfilDAO.cs" />
+    <Compile Include="DAO\TradutorDAO.cs" />
+    <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="Entidades\Idioma.cs" />
+    <Compile Include="Entidades\Palavra.cs" />
+    <Compile Include="Entidades\Perfil.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Paginas\PaginaCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaCadastro.Designer.cs">
+      <DependentUpon>PaginaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\PaginaEsqueciSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaEsqueciSenha.Designer.cs">
+      <DependentUpon>PaginaEsqueciSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\PaginaGerenciarIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaGerenciarIdioma.Designer.cs">
+      <DependentUpon>PaginaGerenciarIdioma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\PaginaInserirPalavra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaInserirPalavra.Designer.cs">
+      <DependentUpon>PaginaInserirPalavra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\PaginaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaLogin.Designer.cs">
+      <DependentUpon>PaginaLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\PaginaMultiDicionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaMultiDicionario.Designer.cs">
+      <DependentUpon>PaginaMultiDicionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\PaginaPainelAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaPainelAdm.Designer.cs">
+      <DependentUpon>PaginaPainelAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\PaginaSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaSobre.Designer.cs">
+      <DependentUpon>PaginaSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\PaginaUsuarioPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paginas\PaginaUsuarioPadrao.Designer.cs">
+      <DependentUpon>PaginaUsuarioPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Paginas\PaginaEsqueciSenha.resx">
+      <DependentUpon>PaginaEsqueciSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\PaginaGerenciarIdioma.resx">
+      <DependentUpon>PaginaGerenciarIdioma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\PaginaInserirPalavra.resx">
+      <DependentUpon>PaginaInserirPalavra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\PaginaLogin.resx">
+      <DependentUpon>PaginaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\PaginaMultiDicionario.resx">
+      <DependentUpon>PaginaMultiDicionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\PaginaPainelAdm.resx">
+      <DependentUpon>PaginaPainelAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\PaginaCadastro.resx">
+      <DependentUpon>PaginaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\PaginaSobre.resx">
+      <DependentUpon>PaginaSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paginas\PaginaUsuarioPadrao.resx">
+      <DependentUpon>PaginaUsuarioPadrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
