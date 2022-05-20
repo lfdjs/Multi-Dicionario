@@ -100,7 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Banco de Dados\ConexaoBanco.cs" />
+    <None Include="Banco de Dados\ConexaoBanco.cs.example" />
     <Compile Include="DAO\IdiomaDAO.cs" />
     <Compile Include="DAO\PalavraDAO.cs" />
     <Compile Include="DAO\PerfilDAO.cs" />
